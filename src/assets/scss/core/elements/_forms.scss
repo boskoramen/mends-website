@@ -5,6 +5,36 @@ fieldset {
     border: 0;
 }
 
+.form-control {
+  height: 50px;
+  background-color: #1c1e21;
+  text-indent: 24px;
+  font-size: 15px;
+  color: #fff;
+}
+
+.form-control:focus {
+  background-color: #25272a;
+  box-shadow: none;
+  color: #fff;
+  border-color: #4f63e7
+}
+
+.form-horizontal{
+  display:block;
+  width:50%;
+  margin:0 auto;
+}
+
+.center {
+  position: relative;
+/*  top: 0;
+  bottom: 0; */
+  left: 0;
+  right: 0;
+  margin: auto;  
+}
+
 .form-label,
 .form-switch,
 .form-slider {

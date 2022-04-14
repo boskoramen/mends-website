@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Row, Col, Form, FormControl } from 'react-bootstrap';
+import { Row, Col, Form, FormControl, CloseButton } from 'react-bootstrap';
 import classNames from 'classnames';
 import Button from '../elements/Button';
 import FormHint from '../elements/FormHint';
@@ -37,49 +37,59 @@ const SignUpForm = ({
         <div className={innerClasses}>
           <div className="hero-content">
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">Enter Your Info</h1>
-            <Form>
+            <Form className="col-md-6 form-horizontal">
               <Row>
-                <Col>
-                  <Form.Group controlId="firstName">
-                    <Form.Label>First Name</Form.Label><br />
+                  <Form.Group as={Col} controlId="firstName">
+                    <Form.Label>First Name</Form.Label>
                     <Form.Control type="text" placeholder="Enter your first name" />
                   </Form.Group>
-                </Col>
-                <Col>
-                  <Form.Group controlId="lastName">
-                    <Form.Label>Last Name</Form.Label><br />
+                  <Form.Group as={Col} controlId="lastName">
+                    <Form.Label>Last Name</Form.Label>
                     <Form.Control type="text" placeholder="Enter your last name" />
                   </Form.Group>
-                </Col>
               </Row>
-              <Form.Group controlId="hic">
-                <Form.Label>HIC (Your License Number)</Form.Label><br/>
+              <Form.Label><br />Now Your Business Information</Form.Label>
+              <Row>
+              <Form.Group controlId="hic" as={Col}>
+                <Form.Label>HIC (Your License Number)</Form.Label>
                 <Form.Control type="text" placeholder="Enter your HIC" />
               </Form.Group>
-              <Form.Group controlId="areaOfPractice">
-                <Form.Label>Area of Practice (ie Plumber)</Form.Label><br/>
+              <Form.Group controlId="areaOfPractice" as={Col}>
+                <Form.Label>Area of Practice (ie Plumber)</Form.Label>
                 <Form.Control type="text" placeholder="Enter your area of practice" />
               </Form.Group>
-              <Form.Group controlId="busName">
-                <Form.Label>Business Name</Form.Label><br/>
+              <Form.Group controlId="busName" as={Col}>
+                <Form.Label>Business Name</Form.Label>
                 <Form.Control type="text" placeholder="Enter your business name" />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <FormLabel>Email Address</FormLabel><br/>
+              </Row>
+              <Form.Label><br />Now Your Information</Form.Label>
+              <Row>
+              <Form.Group as={Col} controlId="formBasicEmail">
+                <FormLabel>Email Address</FormLabel>
                 <FormControl type="email" placeholder="Enter Email" />
               </Form.Group>
-              <Form.Group controlId="formBasicPhone">
-                <FormLabel>Phone Number</FormLabel><br/>
+              <Form.Group as={Col} controlId="formBasicPhone">
+                <FormLabel>Phone Number</FormLabel>
                 <FormControl type="tel" placeholder="Enter Phone Number" />
               </Form.Group>
-              <Form.Group controlId="formBasicPassword">
-                <FormLabel>Password</FormLabel><br/>
+              </Row>
+              <Row>
+              <Form.Group as={Col} controlId="formBasicPassword">
+                <FormLabel>Password</FormLabel>
                 <FormControl type="password" placeholder="Enter Password" />
               </Form.Group>
+              <Form.Group as={Col} controlId="formBasicPassword">
+                <FormLabel>Re-Enter Password</FormLabel>
+                <FormControl type="password" placeholder="Re-Enter Enter Password" />
+              </Form.Group>
+              </Row>
+
             </Form><br />
             <Button tag="a" color="primary" wideMobile href="/">
               Submit
             </Button>
+            <div class="text-center mt-4"> <span>Already a member?</span> <a href="#" class="text-decoration-none">Login</a> </div>
           </div>
         </div>
       </div>
