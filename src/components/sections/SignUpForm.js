@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import Button from '../elements/Button';
+import FormHint from '../elements/FormHint';
+import FormLabel from '../elements/FormLabel';
 
-
-
-const SignUpChoose = ({
+const SignUpForm = ({
   className,
   topOuterDivider,
   bottomOuterDivider,
@@ -34,24 +34,14 @@ const SignUpChoose = ({
     <section className={outerClasses}>
       <div className="container-sm">
         <div className={innerClasses}>
-            <div className="hero-content">
-              <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">Lets sign you up</h1><br></br>
-              <div className="reveal-from-bottom" data-reveal-delay="600">
-                  <Button tag="a" color="primary" wideMobile href="/signup/contractor">
-                    I'm a Contractor
-                    </Button>
-                    <br></br>
-                    <br></br>
-                    <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">Or</p>
-                  <Button tag="a" color="primary" wideMobile href="/signup/homeowner">
-                    I'm a Homeowner
-                    </Button>
-              </div>
-            </div>
+          <div className="hero-content">
+            <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">Hello, world</h1>
           </div>
+        </div>
       </div>
-  </section>
+    </section>
   );
-}
 
-export default SignUpChoose;
+};
+
+export default SignUpForm;
