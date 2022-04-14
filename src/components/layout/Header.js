@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import SignupModal from '../elements/SignupModal';
 import Logo from './partials/Logo';
 
 const propTypes = {
@@ -62,7 +61,6 @@ const Header = ({
 
   const signUp = () => {
     closeMenu();
-    setIsSignUp(true);
   }
 
   const keyPress = (e) => {
@@ -136,7 +134,6 @@ const Header = ({
             </>}
         </div>
       </div>
-      {isSignUp && <SignupModal show={isSignUp} setShow={setIsSignUp} />}
     </header>
     </>
   );
