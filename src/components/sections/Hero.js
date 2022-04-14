@@ -73,6 +73,7 @@ const Hero = ({
                   <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
                     Get started
                     </Button>
+                    <br></br>
                   <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
                     Learn More
                     </Button>
