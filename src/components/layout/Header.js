@@ -32,6 +32,7 @@ const Header = ({
 }) => {
 
   const [isActive, setIsactive] = useState(false);
+  const [isSignUp, setIsSignUp] = useState(false);
 
   const nav = useRef(null);
   const hamburger = useRef(null);
@@ -61,6 +62,7 @@ const Header = ({
 
   const signUp = () => {
     closeMenu();
+    setIsSignUp(true);
   }
 
   const keyPress = (e) => {
@@ -80,6 +82,7 @@ const Header = ({
   );
 
   return (
+    <>
     <header
       {...props}
       className={classes}
@@ -125,7 +128,7 @@ const Header = ({
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={signUp}>Sign up</Link>
+                        <Link to="#01" className="button button-primary button-wide-mobile button-sm" onClick={signUp}>Sign up</Link>
                       </li>
                     </ul>}
                 </div>
@@ -133,7 +136,9 @@ const Header = ({
             </>}
         </div>
       </div>
+      {isSignUp && <SignupModal show={isSignUp} setShow={setIsSignUp} />}
     </header>
+    </>
   );
 }
 

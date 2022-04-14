@@ -22,6 +22,12 @@ const SignupModal = ({ show, setShow, ...props }) => {
         <Modal.Header closeButton>
           <Modal.Title>Sign Up</Modal.Title>
         </Modal.Header>
+        <Modal.Body>
+          Hello, world!
+        </Modal.Body>
+        <Modal.Footer>
+          Hello
+        </Modal.Footer>
       </Modal>
     </div>
   );
