@@ -61,11 +61,12 @@ const Hero = ({
         <div className={innerClasses}>
           <div className="hero-content">
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              Landing template for <span className="text-color-primary">startups</span>
+              Welcome to <span className="text-color-primary">Mends</span>
             </h1>
             <div className="container-xs">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.
+                We provide <span className="text-color-primary">homeowners</span> a platform to find contractors on an emergency basis. 
+                We let <span className="text-color-primary">contractors</span> find work on their own schedule.
                 </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
@@ -73,7 +74,7 @@ const Hero = ({
                     Get started
                     </Button>
                   <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
-                    View on Github
+                    Learn More
                     </Button>
                 </ButtonGroup>
               </div>
@@ -88,7 +89,7 @@ const Hero = ({
             >
               <Image
                 className="has-shadow"
-                src={require('./../../assets/images/video-placeholder.jpg')}
+                src={require('./../../assets/images/play_background.jpg')}
                 alt="Hero"
                 width={896}
                 height={504} />
