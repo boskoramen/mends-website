@@ -43,9 +43,10 @@ const SignUpChoose = ({
                     <br></br>
                     <br></br>
                     <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">Or</p>
+                    <br />
                   <Button tag="a" color="primary" wideMobile href="/signup/homeowner">
                     I'm a Homeowner
-                    </Button>
+                  </Button>
               </div>
             </div>
           </div>

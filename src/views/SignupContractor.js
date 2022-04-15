@@ -1,10 +1,10 @@
 import React from 'react';
 
-import SignUpForm from '../components/sections/SignUpForm';
+import BusSignUpForm from '../components/sections/BusSignUpForm';
 
 const SignupContractor = () => {
   return (
-    <SignUpForm />
+    <BusSignUpForm />
   );
 }
 
