@@ -11,6 +11,7 @@ import LayoutDefault from './layouts/LayoutDefault';
 // Views 
 import Home from './views/Home';
 import Signup from './views/Signup';
+import SignIn from './views/SignIn';
 import SignupContractor from './views/SignupContractor';
 import SignupHomeowner from './views/SignupHomeowner';
 
@@ -44,6 +45,7 @@ const App = () => {
           <AppRoute exact path="/signup" component={Signup} layout={LayoutDefault} />
           <AppRoute exact path="/signup/contractor" component={SignupContractor} layout={LayoutDefault} />
           <AppRoute exact path="/signup/homeowner" component={SignupHomeowner} layout={LayoutDefault} />
+          <AppRoute exact path="/signin" component={SignIn} layout={LayoutDefault} />
         </Switch>
       )} />
   );

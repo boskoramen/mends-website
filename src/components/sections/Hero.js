@@ -67,13 +67,12 @@ const Hero = ({
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
                 We provide <span className="text-color-primary">homeowners</span> a platform to find contractors on an emergency basis. 
                 We let <span className="text-color-primary">contractors</span> find work on their own schedule.
-                </p>
+                </p><br/>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
                   <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
                     Get started
                     </Button>
-                    <br></br>
                   <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
                     Learn More
                     </Button>

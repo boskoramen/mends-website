@@ -31,7 +31,6 @@ const Header = ({
 }) => {
 
   const [isActive, setIsactive] = useState(false);
-  const [isSignUp, setIsSignUp] = useState(false);
 
   const nav = useRef(null);
   const hamburger = useRef(null);
@@ -118,7 +117,7 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>Documentation</Link>
+                      <Link to="#0" onClick={closeMenu}>Login</Link>
                     </li>
                   </ul>
                   {!hideSignin &&
