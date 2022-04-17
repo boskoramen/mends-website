@@ -41,6 +41,9 @@ const Header = ({
     isActive && openMenu();
     document.addEventListener('keydown', keyPress);
     document.addEventListener('click', clickOutside);
+    if (localStorage.getItem("loggedIn") === "true") {
+      setLoggedIn(true);
+    }
     return () => {
       document.removeEventListener('keydown', keyPress);
       document.removeEventListener('click', clickOutside);
@@ -122,10 +125,10 @@ const Header = ({
                       {!isLoggedIn &&
                         <Link to="/signin" onClick={closeMenu}>Login</Link>}
                       {isLoggedIn &&
-                        <Link to="/" onClick={() => setLoggedIn(false)}>Logout</Link>}
+                        <Link to="/" onClick={() => {localStorage.removeItem("loggedIn"); setLoggedIn(false)}}>Logout</Link>}
                     </li>
                   </ul>
-                  {!hideSignin &&
+                  {!hideSignin && !isLoggedIn &&
                     <ul
                       className="list-reset header-nav-right"
                     >

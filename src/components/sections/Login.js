@@ -49,7 +49,7 @@ const Login = ({
                     <Form.Control type="password" placeholder="Enter your password" />
                   </Form.Group>
               </Form> <br />
-              <Link to="/" className="button button-primary button-wide-mobile button-sm" onClick={() => setLoggedIn(true)}>Login</Link>
+              <Link to="/" className="button button-primary button-wide-mobile button-sm" onClick={() => {localStorage.setItem("loggedIn", "true"); setLoggedIn(true);}}>Login</Link>
               <div class="text-center mt-4"> <span>Forgot your password?</span> <Link to="#" className="text-decoration-none">Click here</Link> </div>
               <div class="text-center mt-4"> <span>Don't have an account?</span> <Link to="/signup" className="text-decoration-none">Sign Up</Link> </div>
             </div>
