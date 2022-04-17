@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Row, Col, Form, FormControl, CloseButton } from 'react-bootstrap';
+import { Row, Col, Form, FormControl } from 'react-bootstrap';
 import classNames from 'classnames';
 import Button from '../elements/Button';
 import FormHint from '../elements/FormHint';
@@ -90,7 +90,7 @@ const CusSignUpForm = ({
               <Button tag="a" color="primary" wideMobile href="/">
                 Submit
               </Button>
-              <div class="text-center mt-4"> <span>Already a member?</span> <a href="#" class="text-decoration-none">Login</a> </div>
+              <div class="text-center mt-4"> <span>Already a member?</span> <a href="/signin" class="text-decoration-none">Login</a> </div>
             </div>
           </div>
         </div>

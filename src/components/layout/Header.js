@@ -1,7 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
+import { LoginContext } from '../../context/LoginContext';
 import Logo from './partials/Logo';
 
 const propTypes = {
@@ -31,6 +32,7 @@ const Header = ({
 }) => {
 
   const [isActive, setIsactive] = useState(false);
+  const {isLoggedIn, setLoggedIn} = useContext(LoginContext);
 
   const nav = useRef(null);
   const hamburger = useRef(null);
@@ -117,7 +119,10 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>Login</Link>
+                      {!isLoggedIn &&
+                        <Link to="/signin" onClick={closeMenu}>Login</Link>}
+                      {isLoggedIn &&
+                        <Link to="/" onClick={() => setLoggedIn(false)}>Logout</Link>}
                     </li>
                   </ul>
                   {!hideSignin &&
