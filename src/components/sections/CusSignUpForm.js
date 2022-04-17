@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import Button from '../elements/Button';
 import FormHint from '../elements/FormHint';
 import FormLabel from '../elements/FormLabel';
+import SignupTextModal from '../elements/SignUpTextModal';
 
 const CusSignUpForm = ({
   className,
@@ -15,6 +16,8 @@ const CusSignUpForm = ({
   invertColor,
   ...props
 }) => {
+
+  const [show, setShow] = useState(false);
 
   const outerClasses = classNames(
     'hero section center-content',
@@ -90,6 +93,7 @@ const CusSignUpForm = ({
               <Button tag="a" color="primary" wideMobile href="/">
                 Submit
               </Button>
+              <SignupTextModal show={show} setShow={setShow} />
               <div class="text-center mt-4"> <span>Already a member?</span> <a href="/signin" class="text-decoration-none">Login</a> </div>
             </div>
           </div>
